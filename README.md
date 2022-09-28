@@ -8,4 +8,6 @@ https://rust-lang-nursery.github.io/rust-cookbook
 
 https://ggbaker.ca/prog-langs/
 
+https://www.hackertouch.com/rust-programming-language.html
+
 
