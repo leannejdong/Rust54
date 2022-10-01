@@ -18,6 +18,10 @@ pub fn references(){
     //println!("{:?}", x);
 }
 
+pub fn fnStr(s: &String){
+    println!("From fn: {}", s);
+}
+
 // Dereferencing
 pub fn deferencing() {
 
@@ -45,3 +49,8 @@ pub fn usize_example() {
 pub fn get_first_element(a: &Vec<i32>) -> i32 {
     a[0]
 }
+
+
+
+    
+
