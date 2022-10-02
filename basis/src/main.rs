@@ -7,6 +7,9 @@ use basis::borrowing::get_first_element;
 use basis::borrowing::fnStr;
 use basis::struc::User;
 use basis::struc::build_user;
+use basis::struc::WavetableOscillator;
+// use basis::struc::WavetableOscillator::init;
+// use basis::struc::WavetableOscillator::printer;
 
 
 fn main(){
@@ -72,5 +75,17 @@ fn main(){
 
 
   println!("{:?}", user4);
+
+
+  // create oscillator
+  //let wave_table = vec![0.8,2.2,3.3,0.33];
+  let wave_table_size = 64;
+  let mut wave_table: Vec<f32> = Vec::with_capacity(wave_table_size);
+  for n in 0..wave_table_size{
+    wave_table.push((2.0*std::f32::consts::PI*n as f32/wave_table_size as f32).sin());
+  }
+  let mut oscillator = WavetableOscillator::init(44100, wave_table);
+  oscillator.set_freq(440.0);
+  oscillator.printer();
 
 }
