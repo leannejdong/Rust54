@@ -10,6 +10,7 @@ use basis::struc::build_user;
 use basis::struc::WavetableOscillator;
 // use basis::struc::WavetableOscillator::init;
 // use basis::struc::WavetableOscillator::printer;
+use basis::ptr::ptrs;
 
 
 fn main(){
@@ -27,7 +28,7 @@ fn main(){
     fnStr(&s1);
     println!("{:?}", s1);// after fn call, memory got deallocated, so get a error if u use it again. 
 
-
+    ptrs();
     //Unlimited amount of immutable borrows at any given time.
 
     // One mutable borrow at any given time.
