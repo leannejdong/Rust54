@@ -11,8 +11,8 @@ use basis::struc::WavetableOscillator;
 // use basis::struc::WavetableOscillator::init;
 // use basis::struc::WavetableOscillator::printer;
 use basis::ptr::ptrs;
-
-
+use basis::generic::sum_of_numbers;
+use basis::generic::mul_numbers;
 fn main(){
     //ref();
     let a = vec![1, 2, 3];
@@ -88,5 +88,11 @@ fn main(){
   let mut oscillator = WavetableOscillator::init(44100, wave_table);
   oscillator.set_freq(440.0);
   oscillator.printer();
+
+  //generics
+
+  print!("{:?}\n", sum_of_numbers(1, 2));
+
+  print!("{:?}\n", mul_numbers(1, 2));
 
 }
