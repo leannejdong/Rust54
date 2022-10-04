@@ -13,6 +13,8 @@ use basis::struc::WavetableOscillator;
 use basis::ptr::ptrs;
 use basis::generic::sum_of_numbers;
 use basis::generic::mul_numbers;
+use basis::traits::Animal;
+use basis::traits::Cat;
 fn main(){
     //ref();
     let a = vec![1, 2, 3];
@@ -94,5 +96,12 @@ fn main(){
   print!("{:?}\n", sum_of_numbers(1, 2));
 
   print!("{:?}\n", mul_numbers(1, 2));
+
+  
+  // traits
+
+  let mut miu: Cat = Animal::new("Miu");
+  miu.talk();
+  miu.status();
 
 }
