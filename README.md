@@ -56,6 +56,16 @@ closures, function ptrs, iterators
 
 * function: [example](https://compiler-explorer.com/z/WvYoM4TjM)
 
+* Mutability, Ref, Borrowing
+
+* Arrays and Slices
+
+* Strings
+
+* Loops (if, for, while)
+
+* Match statement (switch cases) [example](https://compiler-explorer.com/z/TM87M4cY5)
+
 
 ## Different Pointers 
 
