@@ -1,5 +1,61 @@
 # Rust Recap
 
+## Road map
+
+### CS fundamental: Stack, heap, pointers, etc
+
+### Memory Management Fundamental
+
+* Manual Memory Management
+
+* garbage collector
+
+### Primitives, variables and Control Flow
+
+### Memory Safety with Ownership& Borrowing
+
+### Type system
+
+* Option
+
+* Result: error handling
+
+* Struct
+
+* Enums
+
+### How to structure project
+
+Rust module system, how to managem dependency
+
+### Polyorphism with generics and traits
+
+### Error handling
+
+### Functional features
+
+closures, function ptrs, iterators
+
+### Concurrency, async/.await
+
+### Macro system
+
+### Unsafe Rust, FFi
+
+## Must know
+
+* Build/Run: `cargo new`, `cargo build`, ...
+
+* Print to console
+
+* Primitive variables: [example](https://compiler-explorer.com/z/zrfY4Tzaq)
+
+* Arrays/Tuples: [example](https://compiler-explorer.com/z/x41z6v5vs)
+
+* Tuples: [example](https://compiler-explorer.com/z/x41z6v5vs)
+
+* function: [example](https://compiler-explorer.com/z/WvYoM4TjM)
+
 
 ## Different Pointers 
 
