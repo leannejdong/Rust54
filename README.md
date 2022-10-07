@@ -70,6 +70,8 @@ closures, function ptrs, iterators
 
 * [Traits](https://compiler-explorer.com/z/Wo516E4G4)
 
+* [Generics](https://compiler-explorer.com/z/se1jExG94)
+
 * Enums
 
 * Vectors
