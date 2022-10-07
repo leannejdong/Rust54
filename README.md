@@ -48,23 +48,37 @@ closures, function ptrs, iterators
 
 * Print to console
 
-* Primitive variables: [example](https://compiler-explorer.com/z/zrfY4Tzaq)
+* [Primitive variables](https://compiler-explorer.com/z/zrfY4Tzaq)
 
-* Arrays/Tuples: [example](https://compiler-explorer.com/z/x41z6v5vs)
+* [Arrays/Tuples](https://compiler-explorer.com/z/x41z6v5vs)
 
-* Tuples: [example](https://compiler-explorer.com/z/x41z6v5vs)
+* [Tuples](https://compiler-explorer.com/z/x41z6v5vs)
 
-* function: [example](https://compiler-explorer.com/z/WvYoM4TjM)
+* [function](https://compiler-explorer.com/z/WvYoM4TjM)
 
 * Mutability, Ref, Borrowing
 
-* Arrays and Slices
+* [Arrays and Slices](https://compiler-explorer.com/z/vT3W3KMGM)
 
 * Strings
 
 * Loops (if, for, while)
 
 * Match statement (switch cases) [example](https://compiler-explorer.com/z/TM87M4cY5)
+
+* Struct
+
+* [Traits](https://compiler-explorer.com/z/Wo516E4G4)
+
+* Enums
+
+* Vectors
+
+* [Hash maps](https://compiler-explorer.com/z/7KrY6GhYs)
+
+* Options
+
+* Results
 
 
 ## Different Pointers 
