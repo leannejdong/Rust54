@@ -78,9 +78,7 @@ closures, function ptrs, iterators
 
 * [Hash maps](https://compiler-explorer.com/z/7KrY6GhYs)
 
-* Options
-
-* Results
+* [Err handling: Options, Results](https://compiler-explorer.com/z/a7r81szYq)
 
 
 ## Different Pointers 
