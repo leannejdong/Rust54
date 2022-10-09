@@ -80,6 +80,10 @@ closures, function ptrs, iterators
 
 * [Err handling: Options, Results](https://compiler-explorer.com/z/a7r81szYq)
 
+* [Lifetime](https://compiler-explorer.com/z/EvfTrGPqx)
+
+* [Lifetime-struct](https://compiler-explorer.com/z/977eMK8vb)
+
 
 ## Different Pointers 
 
