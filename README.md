@@ -84,6 +84,23 @@ closures, function ptrs, iterators
 
 * [Lifetime-struct](https://compiler-explorer.com/z/977eMK8vb)
 
+* [Pattern-Matching]
+By matching expressions,
+```rust
+    let some_garbage  = Err(e);
+    match some_garbage{
+        Err(e)=>{
+            println!("Failed to send junk: {}", e);
+        }
+    }
+```
+via `if let`,
+```rust 
+    if let Err(e) = response.send(&mut stream){
+        println!("Failed to send junk: {}", e);
+    }
+```
+
 
 ## Different Pointers 
 
