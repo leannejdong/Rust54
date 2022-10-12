@@ -1,13 +1,15 @@
 //use basis::borrowing::destroy;
-use basis::borrowing::references;
-use basis::borrowing::deferencing;
-use basis::borrowing::statics;
-use basis::borrowing::usize_example;
-use basis::borrowing::get_first_element;
-use basis::borrowing::fnStr;
-use basis::struc::User;
-use basis::struc::build_user;
-use basis::struc::WavetableOscillator;
+// use basis::borrowing::references;
+// use basis::borrowing::deferencing;
+// use basis::borrowing::statics;
+// use basis::borrowing::usize_example;
+// use basis::borrowing::get_first_element;
+// use basis::borrowing::fnStr;
+use basis::borrowing::*;
+// use basis::struc::User;
+// use basis::struc::build_user;
+// use basis::struc::WavetableOscillator;
+use basis::struc::*;
 // use basis::struc::WavetableOscillator::init;
 // use basis::struc::WavetableOscillator::printer;
 use basis::ptr::ptrs;
@@ -15,6 +17,7 @@ use basis::generic::sum_of_numbers;
 use basis::generic::mul_numbers;
 use basis::traits::Animal;
 use basis::traits::Cat;
+use basis::err::error_handling_example;
 fn main(){
     //ref();
     let a = vec![1, 2, 3];
@@ -103,5 +106,10 @@ fn main(){
   let mut miu: Cat = Animal::new("Miu");
   miu.talk();
   miu.status();
+
+  // error handling
+
+  error_handling_example("src");
+  error_handling_example("lib");
 
 }
