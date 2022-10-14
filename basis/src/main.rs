@@ -18,6 +18,22 @@ use basis::generic::mul_numbers;
 use basis::traits::Animal;
 use basis::traits::Cat;
 use basis::err::error_handling_example;
+
+use std::collections::HashMap;
+#[macro_export]
+macro_rules! make_map {
+    ($k:expr, $v:expr) => {
+      {
+        println!("key:{}", $k);
+        println!("Value:{}", $v);
+        let mut map = HashMap::new();
+        map.insert($k, $v);
+        map
+      }
+        
+    };
+}
+
 fn main(){
     //ref();
     let a = vec![1, 2, 3];
@@ -111,5 +127,13 @@ fn main(){
 
   error_handling_example("src");
   error_handling_example("lib");
+
+  // macro
+  let int_map:HashMap<i32, i32> = make_map!(1, 3);
+  println!("{:#?}", int_map);
+  let str_map: HashMap<&str, &str> = make_map!("green", "go");
+  println!("{:#?}", str_map);
+
+
 
 }

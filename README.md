@@ -100,6 +100,7 @@ via `if let`,
         println!("Failed to send junk: {}", e);
     }
 ```
+* [Threads](https://compiler-explorer.com/z/5dd1vPqxY)
 
 
 ## Different Pointers 
