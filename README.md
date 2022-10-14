@@ -100,7 +100,9 @@ via `if let`,
         println!("Failed to send junk: {}", e);
     }
 ```
-* [Threads](https://compiler-explorer.com/z/5dd1vPqxY)
+* [Threads, cf C++11 threading](https://compiler-explorer.com/z/en6W7evW4)
+
+* [cf C++20 jthread](https://compiler-explorer.com/z/T3rc3Mv9c)
 
 
 ## Different Pointers 
