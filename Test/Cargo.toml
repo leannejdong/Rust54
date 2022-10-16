@@ -1,16 +1,7 @@
 [package]
-name = "basis"
+name = "Test"
 version = "0.1.0"
 edition = "2021"
-
-
-[[bin]]
-name = "basis"
-path = "src/main.rs"
-
-[lib]
-name = "basis"
-path = "src/lib.rs"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
