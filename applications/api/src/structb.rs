@@ -5,11 +5,40 @@ use reqwest::blocking::Client;
 
 use crate::price::*;
 
-fn print_cprice(cprice:CoinPrice){
-    println!("SPOT: {base}-{currency}: {amount}",
-    base = cprice.base,
-    currency = cprice.currency,
-    amount = cprice.amount)
+impl CoinPrice{
+    fn print_cprice(self){
+        println!("SPOT: {base}-{currency}: {amount}",
+        base = self.base,
+        currency = self.currency,
+        amount = self.amount)
+    }
+}
+
+// fn print_cprice(cprice:CoinPrice){
+//     println!("SPOT: {base}-{currency}: {amount}",
+//     base = cprice.base,
+//     currency = cprice.currency,
+//     amount = cprice.amount)
+// }
+
+pub trait Price{
+    fn format_cprice(&self)-> String;
+    fn return_cprice(&self)-> String;
+}
+
+impl Price for CoinPrice{
+    fn format_cprice(&self)-> String{
+        return format!("SPOT: {base}-{currency}: {amount}",
+            base = self.base,
+            currency = self.currency,
+            amount = self.amount
+        );
+    }
+
+    fn return_cprice(&self)-> String {
+        return format!("SPOT: {amount}",
+                amount = self.amount);
+    }
 }
 
 pub fn rust_struct_b() {
@@ -30,7 +59,10 @@ pub fn rust_struct_b() {
                 currency: coinprice.data.currency,
                 amount: coinprice.data.amount
             };
-            print_cprice(spot_price);
+            //spot_price.print_cprice();
+            println!("Format price: {}", spot_price.format_cprice());
+            println!("Return price {}", spot_price.return_cprice());
+
         }
         Err(e) => println!("Err: {:?}", e),
     }    
