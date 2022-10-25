@@ -3,37 +3,37 @@ extern crate serde;
 extern crate reqwest;
 use reqwest::blocking::Client;
 
-use crate::rate::*;
+use crate::time::*;
 
-fn print_cprice(cRate:FXrate){
-    println!("SPOT:{base}--{currency}: {amount}",
-    base = cRate.base,
-    currency = cRate.currency,
-    amount = cRate.amount);
+fn print_ctime(cTime:Time){
+    println!("SPOT:{base}--{iso}: {epoch}",
+    base = cTime.base,
+    iso = cTime.iso,
+    epoch = cRate.epoch);
 }
 
 pub fn rust_struct_c() {
-    let spot_url = format!("https://api.coinbase.com/v2/exchange-rates?currency=BTC",
-        currency = "BTC",
-        rates = "USD");
+    let spot_url = format!("https://api.coinbase.com/v2/time",
+        iso = Utc::now(),
+        epoch = SystemTime::now());
 
     let client = Client::new();
-    let resp_spot_rate = client.get(&spot_url)
+    let resp_spot_time = client.get(&spot_url)
         .send();
     
     match resp_spot_rate {
         Ok(parsed_spot_rate) => {
-            let coinrate = parsed_spot_rate.json::<CoinbaseRate>().unwrap();
+            let cointime = parsed_spot_rate.json::<CoinbaseTime>().unwrap();
             
-            let spot_rate = CoinbaseRate {
-                base: coinrate.data.base,
-                currency: coinrate.data.currency,
-                amount: coinrate.data.amount
+            let spot_rate = CoinbaseTime {
+                base: cointime.data.base,
+                iso: cointime.data.iso,
+                epoch: cointime.data.epoch
             };
-            println!("SPOT: {base}-{rate}: {amount}",
+            println!("SPOT: {base}-{iso}: {epoch}",
                 base=spot_rate.base,
-                currency=spot_rate.currency,
-                amount=spot_rate.amount);
+                iso=spot_rate.iso,
+                epoch=spot_rate.epoch);
         }
         Err(e) => println!("Err: {:?}", e),
     }    
